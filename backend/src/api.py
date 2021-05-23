@@ -62,7 +62,7 @@ try:
             body = request.get_json()
             title = body['title']
             recipes = body['recipe']
-            if(type(recipes) == list):
+             if(type(recipes) == list):
                 if len(recipes) == 0:
                     string_body = "[]"
                 else:
