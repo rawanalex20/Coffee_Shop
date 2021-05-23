@@ -66,22 +66,13 @@ try:
                 if len(recipes) == 0:
                     string_body = "[]"
                 else:
-                    string_body = ("[{" + f"\"name\":
-                                    \"{recipes[0]['name']}\", \"color\":
-                                    \"{recipes[0]['color']}\", \"parts\":
-                                    {recipes[0]['parts']}" + "}")
+                    string_body = "[{" + f"\"name\": \"{recipes[0]['name']}\", \"color\": \"{recipes[0]['color']}\", \"parts\": {recipes[0]['parts']}" + "}"
                     for recipe in recipes[1:len(recipes)]:
-                        string_body = (string_body + ",{" + f"\"name\":
-                            \"{recipe['name']}\", \"color\":
-                                \"{recipe['color']}\", \"parts\":
-                                    {recipe['parts']}" + "}")
+                        string_body = string_body + ",{" + f"\"name\": \"{recipe['name']}\", \"color\": \"{recipe['color']}\", \"parts\": {recipe['parts']}" + "}"
                     string_body = string_body + "]"
                 print(string_body)
             else:
-                string_body = ("[{" + f"\"name\":
-                    \"{recipes['name']}\", \"color\":
-                        \"{recipes['color']}\", \"parts\":
-                            {recipes['parts']}" + "}]")
+                string_body = "[{" + f"\"name\": \"{recipes['name']}\", \"color\": \"{recipes['color']}\", \"parts\": {recipes['parts']}" + "}]"
                 print(string_body)
         
             drink = Drink(
@@ -122,22 +113,13 @@ try:
                     if len(recipes) == 0:
                         string_body = "[]"
                     else:
-                        string_body = ("[{" + f"\"name\":
-                            \"{recipes[0]['name']}\", \"color\":
-                                \"{recipes[0]['color']}\", \"parts\":
-                                    {recipes[0]['parts']}" + "}")
+                        string_body = "[{" + f"\"name\": \"{recipes[0]['name']}\", \"color\": \"{recipes[0]['color']}\", \"parts\": {recipes[0]['parts']}" + "}"
                         for recipe in recipes[1:len(recipes)]:
-                            string_body = (string_body + ",{" + f"\"name\":
-                                \"{recipe['name']}\", \"color\":
-                                    \"{recipe['color']}\", \"parts\":
-                                        {recipe['parts']}" + "}")
+                            string_body = string_body + ",{" + f"\"name\": \"{recipe['name']}\", \"color\": \"{recipe['color']}\", \"parts\": {recipe['parts']}" + "}"
                         string_body = string_body + "]"
                     print(string_body)
                 else:
-                    string_body = ("[{" + f"\"name\":
-                        \"{recipes['name']}\", \"color\":
-                            \"{recipes['color']}\", \"parts\":
-                                {recipes['parts']}" + "}]")
+                    string_body = "[{" + f"\"name\": \"{recipes['name']}\", \"color\": \"{recipes['color']}\", \"parts\": {recipes['parts']}" + "}]"
                     print(string_body)
                 drink.recipe=string_body
             db.session.commit()
